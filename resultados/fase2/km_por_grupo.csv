@@ -1,0 +1,11 @@
+variable,grupo,creditos,eventos,incidencia_12m_%,ic95_%,logrank_p
+anio_cohorte,2022,52,8,12.69,5.9–26.2,0.0161
+anio_cohorte,2023,208,6,7.11,3.0–16.5,0.0161
+anio_cohorte,2024,275,8,4.97,2.3–10.8,0.0161
+anio_cohorte,2025,226,7,3.74,1.7–8.2,0.0161
+anio_cohorte,2026,322,0,0.0,0.0–0.0,0.0161
+es_recurrente,Nuevo,572,16,7.44,4.3–12.7,0.3714
+es_recurrente,Recurrente,511,13,4.15,2.2–7.9,0.3714
+monto_terciles,Monto bajo,361,5,2.82,0.9–9.0,0.7145
+monto_terciles,Monto medio,361,8,5.19,2.5–10.4,0.7145
+monto_terciles,Monto alto,361,16,7.17,4.1–12.4,0.7145

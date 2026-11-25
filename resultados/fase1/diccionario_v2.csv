@@ -1,0 +1,40 @@
+variable,grupo,tipo,descripcion,signo_esperado,%_disponible_libranza_elegible,%_disponible_elegible_<2025,%_disponible_elegible_2025+,%_disponible_libranza_todos
+monto,Crédito,num,Valor total del crédito (COP),?,100.0,100.0,100.0,100.0
+n_cuotas,Crédito,num,Número de cuotas pactadas,+,100.0,100.0,100.0,100.0
+plazo_meses,Crédito,num,Plazo según el plan de pagos (meses),+,100.0,100.0,100.0,100.0
+cuota_mensual,Crédito,num,Cuota mensual equivalente (COP),?,99.9,99.8,100.0,99.9
+tasa_mensual,Crédito,num,Tasa pactada (% mensual),+,100.0,100.0,100.0,100.0
+recaudo,Crédito,cat,"Modalidad de recaudo: empresarial (nómina), mensual o quincenal (pago directo)",directo +,100.0,100.0,100.0,100.0
+tiene_aval,Crédito,bin,Tiene aval o fianza,?,100.0,100.0,100.0,100.0
+aval_pct,Crédito,num,Porcentaje de aval,?,43.8,17.2,99.2,58.6
+cobra_seguro,Crédito,bin,Cobra seguro de vida,?,100.0,100.0,100.0,100.0
+cobra_estudio,Crédito,bin,Cobra estudio de crédito,?,100.0,100.0,100.0,100.0
+cobra_4x1000,Crédito,bin,Traslada el 4x1000 al cliente,?,100.0,100.0,100.0,100.0
+con_prenda,Crédito,bin,Libranza con prenda,−,100.0,100.0,100.0,100.0
+tipo_solicitud,Crédito,cat,"Crédito nuevo, refinanciación o sin solicitud enlazada",?,100.0,100.0,100.0,100.0
+es_refinanciacion,Crédito,bin,La solicitud es una refinanciación,+,100.0,100.0,100.0,100.0
+monto_sobre_solicitado,Crédito,num,Monto aprobado / monto solicitado,−,10.1,1.2,28.7,13.3
+edad_t0,Cliente,num,Edad en la fecha de solicitud (años),−,99.6,99.6,99.6,99.7
+n_creditos_previos,Historia,num,Créditos previos del mismo cliente,−,100.0,100.0,100.0,100.0
+n_activos_t0,Historia,num,Créditos previos aún activos en t0,+,100.0,100.0,100.0,100.0
+es_recurrente,Historia,bin,Tuvo al menos un crédito previo,−,100.0,100.0,100.0,100.0
+peor_mora_previa,Historia,num,Peor DPD de sus créditos previos hasta el día anterior a t0,+,53.2,47.6,65.0,47.0
+meses_desde_primer_credito,Historia,num,Antigüedad como cliente (meses),−,53.2,47.6,65.0,47.0
+cierre_previo,Historia,cat,Cómo terminó su último crédito cerrado antes de t0,con_saldo +,100.0,100.0,100.0,100.0
+emp_creditos_previos,Empleador,num,Créditos originados en el mismo empleador antes de t0,−,100.0,100.0,100.0,100.0
+sin_empleador,Empleador,bin,Crédito sin empleador registrado,+,100.0,100.0,100.0,100.0
+score_buro,Buró,num,Puntaje TransUnion,−,2.5,0.0,7.6,19.7
+sin_historial_buro,Buró,bin,Sin historial en buró,+,2.6,0.0,8.0,20.0
+n_obligaciones_buro,Buró,num,Obligaciones reportadas,?,2.5,0.0,7.6,19.7
+aperturas_6m,Buró,num,Aperturas en los últimos 6 meses,+,2.5,0.0,7.6,18.9
+veces_30mas_12m,Buró,num,Veces en mora 30+ en 12 meses,+,2.5,0.0,7.6,18.6
+veces_90mas_12m,Buró,num,Veces en mora 90+ en 12 meses,+,2.5,0.0,7.6,18.6
+castigos_buro,Buró,num,Obligaciones castigadas,+,2.5,0.0,7.6,18.9
+valor_en_mora_buro,Buró,num,Valor en mora reportado (miles COP),+,2.5,0.0,7.6,17.8
+cuota_total_buro,Buró,num,Cuota total de obligaciones (COP),+,2.5,0.0,7.6,17.7
+salario_declarado,Buró,num,Salario declarado (COP),−,2.5,0.0,7.6,19.7
+cuota_sobre_salario,Buró,num,Cuota del crédito / salario,+,2.5,0.0,7.6,19.7
+carga_financiera_buro,Buró,num,Cuota total en buró / salario,+,2.5,0.0,7.6,17.7
+pila_meses_cotizados_12m,PILA,num,Meses cotizados en los últimos 12,−,0.4,0.0,1.3,14.9
+pila_antiguedad_aportante_meses,PILA,num,Meses con el aportante actual,−,0.4,0.0,1.3,14.9
+pila_salario_sobre_declarado,PILA,num,Salario PILA / salario declarado,−,0.4,0.0,1.3,14.8

@@ -1,0 +1,11 @@
+variables,razon,tratamiento
+recaudo,"Significado no documentado; indicador de época (PSI 7,7; relación invertida dentro de 2023)",Solo sensibilidad
+"veces_30mas_12m, veces_90mas_12m",Semántica no verificada y 0 % disponible en desarrollo,Excluidas (Fase 6)
+resto del buró y PILA,"0 % disponible en desarrollo; 7,6 % en 2025+",Excluidas
+"tiene_aval, aval_pct, cobra_seguro, cobra_estudio, cobra_4x1000","Parámetros de política que cambian de golpe (PSI 2,7–7)",Excluidas
+"tipo_solicitud, es_refinanciacion",La marca de refinanciación solo existe desde 2024Q2,Excluidas
+tasa_mensual,Precio fijado según el perfil: endógena al riesgo percibido,Excluida
+"cuota_mensual, n_cuotas",Redundantes con monto y plazo,Excluidas
+"monto_sobre_solicitado, con_prenda, sin_empleador","10 % disponible / 0,4 % / constante",Excluidas
+género,Decisión de Eider: eliminado por completo; no hay auditoría de equidad por género,Excluida
+"identidad, LAFT/SARLAFT, geografía, huella digital","Por principio (AGENTS.md, minimización de datos)",Excluidas

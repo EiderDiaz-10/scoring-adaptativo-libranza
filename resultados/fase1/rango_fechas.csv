@@ -1,0 +1,11 @@
+tabla.columna,no_nulos,no_parseables,minima,maxima
+bd_credito.fechainicialcredito,1267,0,2021-07-19,2026-10-08
+bd_credito.fechavencimientocredito,1267,0,2022-02-23,2044-10-04
+bd_credito.fechaposibledesembolso,1267,0,2021-07-23,2026-10-08
+bd_solicitud.fechasolicitud,1335,0,2023-05-17,2026-10-08
+bd_desembolso.fechadesembolso,1228,0,2021-07-23,2026-10-08
+bd_proyeccionpagos.fecha,70214,0,2021-08-23,2044-10-04
+bd_transaccionpago.fechapago,9964,0,2021-08-06,2026-10-08
+bd_saldo.fecha_transaccion,1226,0,2023-02-17,2026-10-08
+bd_saldomesames.fecha_cierre_mes,10795,0,2021-09-30,2026-10-31
+bd_pagosempresas.fechapago,6118,0,2021-10-10,2025-09-04

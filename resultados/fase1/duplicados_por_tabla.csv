@@ -1,0 +1,16 @@
+tabla,filas,duplicados_exactos_sin_id
+bd_credito,1267,5.0
+bd_solicitud,1335,2.0
+bd_cliente,670,
+bd_empresas,47,
+bd_desembolso,1228,0.0
+bd_proyeccionpagos,70215,0.0
+bd_transaccionpago,9964,1.0
+bd_saldo,1226,0.0
+bd_saldomesames,10795,0.0
+bd_pagosempresas,6118,13.0
+bd_facturacioninteres,8562,10.0
+bd_avales,5398,0.0
+bd_consultas,1491,0.0
+bd_tipocredito,4,0.0
+bd_gastosadministrativos,43,0.0

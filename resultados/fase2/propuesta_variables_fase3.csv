@@ -1,0 +1,23 @@
+variable,iv,auc,signo_esperado,signo_observado,propuesta,razon
+monto,0.626,0.666,?,+,Núcleo (vigilar),"Única variable sobre el IV de ruido, pero la señal no se repite con 60+/30+"
+cuota_mensual,0.451,0.678,?,+,Fuera (redundante),"Redundante con plazo / monto (Spearman ≥ 0,8)"
+emp_creditos_previos,0.247,0.306,−,−,Núcleo (vigilar),Señal consistente en las tres definiciones; evaluar dentro de cohorte (crece con el calendario)
+cierre_previo,0.213,,,,Núcleo,Señal de dominio clara y disponible en t0 en todas las cohortes
+cobra_4x1000,0.121,0.591,?,+,Candidata secundaria,Parámetro de producto que cambia con la política; revisar deriva (notebook 07)
+meses_desde_primer_credito,0.066,0.457,−,−,Núcleo,Señal de dominio clara y disponible en t0 en todas las cohortes
+plazo_meses,0.064,0.574,+,+,Núcleo,Señal de dominio clara y disponible en t0 en todas las cohortes
+edad_t0,0.063,0.426,−,−,Núcleo,Señal de dominio clara y disponible en t0 en todas las cohortes
+tasa_mensual,0.055,0.532,+,+,Candidata secundaria,Poca variación entre clientes; se fija por política
+peor_mora_previa,0.032,0.436,+,−,Núcleo por dominio,"Signo observado opuesto al esperado, IC incluye 0,5; se conserva por dominio, no por los datos"
+n_creditos_previos,0.019,0.467,−,−,Núcleo,Señal de dominio clara y disponible en t0 en todas las cohortes
+tipo_solicitud,0.017,,,,Fuera del núcleo,La etiqueta de refinanciación solo existe desde 2024Q2 (indicador de época)
+n_activos_t0,0.013,0.428,+,−,Candidata secundaria,"Signo observado opuesto al esperado, IC incluye 0,5; se conserva por dominio, no por los datos"
+es_refinanciacion,0.013,,,,Fuera del núcleo,La etiqueta de refinanciación solo existe desde 2024Q2 (indicador de época)
+recaudo,0.01,,,,Fuera del núcleo,Confundida con la época (directo hasta 2023Q3); pendiente de aclarar con la operación
+tiene_aval,0.007,0.508,?,+,Candidata secundaria,Parámetro de producto que cambia con la política; revisar deriva (notebook 07)
+es_recurrente,0.005,0.48,−,−,Núcleo,Señal de dominio clara y disponible en t0 en todas las cohortes
+cobra_seguro,0.0,,,,Fuera del núcleo,Constante antes de 2025 (parámetro de producto introducido después)
+cobra_estudio,0.0,,,,Fuera del núcleo,Constante antes de 2025 (parámetro de producto introducido después)
+buró y PILA (todas),,,,,Fuera del modelo con datos propios,0 % de datos en desarrollo; solo vía prior de Home Credit o en supervivencia con créditos recientes
+género,,,,,Excluida,Decisión 6 del Project
+huella digital,,,,,Excluida,Sin créditos maduros; la versión de la v1 era sintética

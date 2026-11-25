@@ -1,0 +1,7 @@
+variable,beta_hc_por_unidad,ic95_hc,de_fintech,centro_prior_estandarizado,odds_ratio_por_de,signo_esperado,coincide_signo
+edad_t0,-0.0211,-0.0226 a -0.0196,11.0009,-0.232,0.7929,−,True
+log_plazo,-0.119,-0.1554 a -0.0825,0.7415,-0.0882,0.9156,+,False
+tiene_historia,0.7053,0.6201 a 0.7906,0.4994,0.3522,1.4223,−,False
+log_n_previos,-0.1434,-0.1821 a -0.1047,0.575,-0.0825,0.9209,−,True
+meses_cliente,-0.0095,-0.0102 a -0.0088,10.1835,-0.0968,0.9077,−,True
+log_peor_mora_previa,0.1895,0.1790 a 0.1999,1.3905,0.2635,1.3014,+,True

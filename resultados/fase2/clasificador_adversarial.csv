@@ -1,0 +1,7 @@
+variables,auc_adversarial
+todas,0.963
+edad_t0,0.569
+plazo_meses,0.861
+n_creditos_previos,0.792
+peor_mora_previa,0.817
+meses_desde_primer_credito,0.891

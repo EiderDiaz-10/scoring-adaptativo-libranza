@@ -1,0 +1,16 @@
+tabla,filas,columnas_totales,columnas_personales_descartadas,llave_id_unica,id_nulos
+bd_credito,1267,34,1,True,0
+bd_solicitud,1335,34,1,True,0
+bd_cliente,670,17,10,True,0
+bd_empresas,47,10,5,True,0
+bd_desembolso,1228,8,1,True,0
+bd_proyeccionpagos,70215,17,0,True,0
+bd_transaccionpago,9964,9,1,True,0
+bd_saldo,1226,24,0,True,0
+bd_saldomesames,10795,11,0,True,0
+bd_pagosempresas,6118,13,0,True,0
+bd_facturacioninteres,8562,8,0,True,0
+bd_avales,5398,11,0,True,0
+bd_consultas,1491,13,4,True,0
+bd_tipocredito,4,2,0,True,0
+bd_gastosadministrativos,43,4,0,True,0

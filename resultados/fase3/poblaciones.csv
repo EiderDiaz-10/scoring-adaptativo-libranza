@@ -1,0 +1,10 @@
+poblacion,creditos,eventos,clientes,tasa_%,ic95_%
+"Principal: 90+/12m, etiqueta v1.1",733,23,357,3.14,2.1–4.7
+Etiqueta original de la Fase 1,731,21,356,2.87,1.9–4.4
+60+/12m,733,29,357,3.96,2.8–5.6
+30+/6m,790,64,372,8.1,6.4–10.2
+"90+/12m, variante B",733,126,357,17.19,14.6–20.1
+Indeterminados = no evento,773,23,369,2.98,2.0–4.4
+Indeterminados = evento,773,63,369,8.15,6.4–10.3
+Sin la cohorte 2022,684,17,345,2.49,1.6–3.9
+"Supervivencia (libranza 2022+, censurados incluidos)",1083,29,574,,—

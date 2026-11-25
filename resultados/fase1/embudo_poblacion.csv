@@ -1,0 +1,12 @@
+paso,creditos,eventos_90_12m
+Créditos en bd_credito,1267,
+(−) anulados o pendientes de desembolso,-106,
+= créditos no anulados,1161,
+(−) libre inversión,-74,
+= libranza no anulados,1087,
+(−) ventana de 12 meses inmadura,-310,
+"(−) indeterminados (con saldo, sin crédito posterior)",-42,
+(−) cohorte 2021,-4,
+= población primaria (libranza elegible),731,21.0
+   de ellos cohortes < 2025,494,16.0
+   de ellos cohortes 2025+,237,5.0

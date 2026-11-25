@@ -1,0 +1,15 @@
+relacion,filas,nulos,huerfanos
+bd_credito.cliente_id → bd_cliente.id,1267,0,0
+bd_credito.empresa_id → bd_empresas.id,1267,46,0
+bd_credito.solicitud_id → bd_solicitud.id,1267,259,0
+bd_credito.tipocredito_id → bd_tipocredito.id,1267,0,0
+bd_solicitud.credito_id → bd_credito.id,1335,1102,0
+bd_solicitud.cliente_id → bd_cliente.id,1335,0,0
+bd_desembolso.credito_id → bd_credito.id,1228,0,0
+bd_proyeccionpagos.credito_id → bd_credito.id,70215,19638,0
+bd_transaccionpago.credito_id → bd_credito.id,9964,0,0
+bd_saldo.credito_id → bd_credito.id,1226,0,0
+bd_saldomesames.credito_id → bd_credito.id,10795,0,0
+bd_pagosempresas.credito_id → bd_credito.id,6118,0,0
+bd_facturacioninteres.credito_id → bd_credito.id,8562,0,0
+bd_avales.credito_id → bd_credito.id,5398,0,0

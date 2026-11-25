@@ -1,0 +1,24 @@
+fuente,columnas,momento,decision,razon
+bd_credito,"valortotal, cantidadcuotas, cuotapactada, tasa",Originación,Entra,Términos pactados del crédito
+bd_credito,cnfrecaudo,Originación,Entra,"Modalidad de recaudo pactada (empresarial, mensual, quincenal)"
+bd_credito,"tipo_aval, aval, cnfdescuento_aval",Originación,Entra,Garantía pactada
+bd_credito,"valor_seguro, porcentaje_seguro, estudio_credito, cnfgastos",Originación,Entra (derivadas),Costos asociados al crédito
+bd_credito,tipocredito_id,Originación,Filtro + marca de prenda,Define la población (libranza) y la marca con prenda
+bd_credito,empresa_id,Originación,Solo derivadas,El id del empleador no entra; se usa su historia previa a t0
+bd_credito,fechavencimientocredito,Originación,No (redundante),"Equivale al plazo, que se calcula del plan"
+bd_credito,estado,Posterior a t0,Vetada (fuga),Estado actual del crédito
+bd_credito,categoria_credito,Posterior a t0,Vetada (fuga),Cambia a REFINANCIADO cuando se refinancia
+bd_credito,en_refinanciacion,Posterior a t0,Vetada (fuga),APROBADA coincide con refinanciaciones futuras (notebook 01)
+bd_credito,categoria_inicial,Originación,No (constante),Vale NUEVO en el 100 % de los créditos
+bd_credito,"gasto_perfil, gasto_adicional, puntos_seguridad_seguro, tasa_anual_seguro",Originación,No,Casi constantes o sin documentación
+bd_solicitud,tipo_solicitud,Originación,Entra,Crédito nuevo o refinanciación
+bd_solicitud,montosolicitado,Originación,Entra (razón),Monto aprobado / solicitado
+bd_solicitud,"estado, fue_modificado, cantidad_modificaciones",Proceso,No,Estado de la solicitud; fue_modificado es constante
+bd_solicitud,cuotarecaudada,Ambigua,No,Sin documentación clara de cuándo se fija
+"bd_saldo, bd_saldomesames, bd_pagosempresas, bd_avales",todas,Posterior a t0,Vetada (fuga),Describen el desempeño del crédito
+bd_cliente,fechanacimiento,Originación,Solo edad en t0,La fecha se descarta tras calcular la edad
+bd_cliente,genero,Originación,Excluida por decisión,Decisión 6: el género no entra al modelado
+bd_cliente,"departamentos_id, ciudades_id",Originación,Excluida,Minimización de datos y riesgo de proxy socioeconómico
+bd_cliente,"nombres, documento, correo, teléfono, dirección",—,Nunca se leen,Datos personales (Ley 1581)
+Buró / PILA (fase 2D v1),"score, obligaciones, moras, salario, PILA",Consulta en la originación,Entra si la consulta es anterior al desembolso,Disponible desde dic-2025
+Huella digital,todas,Originación (desde ago-2026),Excluida del modelo principal,Sin créditos maduros y la versión de la v1 era sintética

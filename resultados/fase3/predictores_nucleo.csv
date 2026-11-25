@@ -1,0 +1,12 @@
+variable,construccion,signo_esperado,en_home_credit,%_faltante,media,de
+log_monto,log del valor total del crédito,?,False,0.0,14.953,1.082
+log_plazo,log del plazo según el plan (meses),+,True,0.0,2.652,0.742
+edad_t0,edad en t0 (años); mediana del pliegue si falta,−,True,0.4,39.306,11.001
+tiene_historia,tuvo al menos un crédito previo,−,True,0.0,0.531,0.499
+log_n_previos,log(1 + créditos previos),−,True,0.0,0.541,0.575
+meses_cliente,meses desde el primer crédito (0 si es nuevo),−,True,0.0,7.864,10.183
+log_peor_mora_previa,log(1 + peor DPD previo hasta t0 − 1 día; 0 si es nuevo),+,True,0.0,0.994,1.391
+previo_adverso,último cierre con saldo o por refinanciación,+,False,0.0,0.195,0.397
+previo_favorable,último cierre a término o prepago,−,False,0.0,0.171,0.376
+n_activos_t0,créditos previos activos en t0,+,False,0.0,0.379,0.518
+log_emp_previos,log(1 + créditos previos del empleador),−,False,0.0,4.068,1.541

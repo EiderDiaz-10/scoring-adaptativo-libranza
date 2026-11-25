@@ -1,0 +1,16 @@
+variable,psi_mediano,psi_maximo,trimestres_>0.25
+recaudo,7.694,7.694,16
+tiene_aval,7.045,18.421,9
+tasa_mensual,4.945,7.833,14
+emp_creditos_previos,3.39,5.904,16
+tipo_solicitud,3.052,9.202,14
+cobra_4x1000,2.678,7.394,10
+meses_desde_primer_credito,1.481,2.623,16
+n_creditos_previos,0.981,1.736,16
+monto,0.44,1.459,10
+cierre_previo,0.437,1.69,13
+peor_mora_previa,0.341,1.806,13
+plazo_meses,0.271,0.623,9
+edad_t0,0.203,0.878,5
+cobra_seguro,0.0,13.525,3
+cobra_estudio,0.0,18.421,6

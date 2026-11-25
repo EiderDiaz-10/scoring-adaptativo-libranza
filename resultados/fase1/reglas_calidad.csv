@@ -1,0 +1,53 @@
+codigo,regla,afectados,base,pct,accion
+R01,Llave id única en bd_credito,0,1,0.0,Ninguna
+R01,Llave id única en bd_solicitud,0,1,0.0,Ninguna
+R01,Llave id única en bd_cliente,0,1,0.0,Ninguna
+R01,Llave id única en bd_empresas,0,1,0.0,Ninguna
+R01,Llave id única en bd_desembolso,0,1,0.0,Ninguna
+R01,Llave id única en bd_proyeccionpagos,0,1,0.0,Ninguna
+R01,Llave id única en bd_transaccionpago,0,1,0.0,Ninguna
+R01,Llave id única en bd_saldo,0,1,0.0,Ninguna
+R01,Llave id única en bd_saldomesames,0,1,0.0,Ninguna
+R01,Llave id única en bd_pagosempresas,0,1,0.0,Ninguna
+R01,Llave id única en bd_facturacioninteres,0,1,0.0,Ninguna
+R01,Llave id única en bd_avales,0,1,0.0,Ninguna
+R01,Llave id única en bd_consultas,0,1,0.0,Ninguna
+R01,Llave id única en bd_tipocredito,0,1,0.0,Ninguna
+R01,Llave id única en bd_gastosadministrativos,0,1,0.0,Ninguna
+R01b,Misma persona con más de un id de cliente,2,670,0.3,Unificar el grupo de cliente para la validación agrupada
+R01c,Créditos no anulados duplicados exactos (sin id),0,1161,0.0,Ninguna si es 0 (los duplicados están en anulados)
+R02,Pagos ACTIVO duplicados exactos,0,8883,0.0,Se eliminan antes de reconstruir la mora
+R03,"Pagos ACTIVO casi duplicados (mismo crédito, fecha y valor)",7,8883,0.08,Se conservan (pueden ser dos cuotas legítimas el mismo día); se mide su efecto en la Fase 1.2
+R04,Huérfanos en bd_credito.cliente_id → bd_cliente.id,0,1267,0.0,Ninguna
+R04,Huérfanos en bd_credito.empresa_id → bd_empresas.id,0,1221,0.0,Ninguna
+R04,Huérfanos en bd_credito.solicitud_id → bd_solicitud.id,0,1008,0.0,Ninguna
+R04,Huérfanos en bd_credito.tipocredito_id → bd_tipocredito.id,0,1267,0.0,Ninguna
+R04,Huérfanos en bd_solicitud.credito_id → bd_credito.id,0,233,0.0,Ninguna
+R04,Huérfanos en bd_solicitud.cliente_id → bd_cliente.id,0,1335,0.0,Ninguna
+R04,Huérfanos en bd_desembolso.credito_id → bd_credito.id,0,1228,0.0,Ninguna
+R04,Huérfanos en bd_proyeccionpagos.credito_id → bd_credito.id,0,50577,0.0,Ninguna
+R04,Huérfanos en bd_transaccionpago.credito_id → bd_credito.id,0,9964,0.0,Ninguna
+R04,Huérfanos en bd_saldo.credito_id → bd_credito.id,0,1226,0.0,Ninguna
+R04,Huérfanos en bd_saldomesames.credito_id → bd_credito.id,0,10795,0.0,Ninguna
+R04,Huérfanos en bd_pagosempresas.credito_id → bd_credito.id,0,6118,0.0,Ninguna
+R04,Huérfanos en bd_facturacioninteres.credito_id → bd_credito.id,0,8562,0.0,Ninguna
+R04,Huérfanos en bd_avales.credito_id → bd_credito.id,0,5398,0.0,Ninguna
+R05,Crédito no anulado sin solicitud enlazada,194,1161,16.71,t0 = fecha inicial del crédito
+R06,Solicitud enlazada a más de un crédito,0,1161,0.0,Revisar; no afecta el objetivo
+R07,Crédito no anulado sin desembolso registrado,0,1161,0.0,t_ref = fecha inicial del crédito
+R08,Crédito con más de un desembolso,0,1161,0.0,Se toma la primera fecha de desembolso
+R09,Crédito no anulado sin plan de pagos,0,1161,0.0,No se puede reconstruir la mora
+R10,Solicitud posterior al inicio del crédito,26,967,2.69,t0 = mínimo entre solicitud e inicio
+R11,Solicitud más de 90 días antes del inicio,0,967,0.0,t0 = mínimo entre solicitud e inicio
+R12,Desembolso antes del inicio del crédito,0,1161,0.0,t_ref = primera fecha de desembolso
+R13,Desembolso más de 30 días después del inicio,2,1161,0.17,t_ref = primera fecha de desembolso
+R14,Vencimiento contractual anterior o igual al inicio,1,1161,0.09,Revisar con la operación
+R15,Inicio del crédito posterior al corte,0,1161,0.0,Revisar con la operación
+R16,Pago ACTIVO anterior al desembolso,0,8883,0.0,Se conserva: el FIFO lo aplica a la primera cuota (no crea mora)
+R17,Pago ACTIVO posterior a la fecha de corte,0,8883,0.0,Ninguna si es 0
+R18,Primera cuota del plan antes del desembolso,0,1160,0.0,Revisar; el DPD empieza a contar desde el desembolso
+R19,Cuotas del plan DESEMBOLSO distintas de cantidadcuotas,1,1160,0.09,Se usa el plan (fechas reales de exigibilidad)
+R20,Valor total <= 0 o faltante,0,1161,0.0,Revisar
+R21,Edad en t0 faltante,0,1161,0.0,Se deja faltante
+R22,Edad en t0 < 18 o > 80 años,3,1161,0.26,Se marca como faltante en el dataset analítico
+R23,"Columnas de estado posterior a t0 en bd_credito (estado, categoria_credito, en_refinanciacion)",3,34,8.82,Excluidas como predictores (fuga)

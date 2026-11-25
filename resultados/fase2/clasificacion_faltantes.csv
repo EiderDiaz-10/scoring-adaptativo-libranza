@@ -1,0 +1,21 @@
+variable,%_faltante_total,primer_trimestre_con_dato,p_chi2_vs_trimestre,clasificacion
+monto_sobre_solicitado,86.6,2024Q2,3.2406188441277342e-43,Estructural (la fuente existe desde 2024Q2)
+pila_salario_sobre_declarado,85.1,2026Q2,7.808731852944314e-112,Estructural (la fuente existe desde 2026Q2)
+pila_antiguedad_aportante_meses,85.0,2026Q2,7.002723260678183e-113,Estructural (la fuente existe desde 2026Q2)
+pila_meses_cotizados_12m,85.0,2026Q2,7.002723260678183e-113,Estructural (la fuente existe desde 2026Q2)
+carga_financiera_buro,82.3,2026Q1,2.7563491496743715e-105,Estructural (la fuente existe desde 2026Q1)
+cuota_total_buro,82.3,2026Q1,2.7563491496743715e-105,Estructural (la fuente existe desde 2026Q1)
+valor_en_mora_buro,82.2,2026Q1,3.5552663959888986e-106,Estructural (la fuente existe desde 2026Q1)
+veces_30mas_12m,81.3,2026Q1,4.1864788293289325e-113,Estructural (la fuente existe desde 2026Q1)
+veces_90mas_12m,81.3,2026Q1,4.1864788293289325e-113,Estructural (la fuente existe desde 2026Q1)
+aperturas_6m,81.1,2026Q1,1.0232498442244143e-115,Estructural (la fuente existe desde 2026Q1)
+castigos_buro,81.1,2026Q1,1.0232498442244143e-115,Estructural (la fuente existe desde 2026Q1)
+n_obligaciones_buro,80.2,2026Q1,6.728051053023653e-123,Estructural (la fuente existe desde 2026Q1)
+score_buro,80.2,2026Q1,6.728051053023653e-123,Estructural (la fuente existe desde 2026Q1)
+salario_declarado,80.2,2026Q1,6.728051053023653e-123,Estructural (la fuente existe desde 2026Q1)
+cuota_sobre_salario,80.2,2026Q1,6.728051053023653e-123,Estructural (la fuente existe desde 2026Q1)
+meses_desde_primer_credito,52.8,2022Q3,1.3794215669673841e-36,Por diseño (solo si hay crédito previo)
+peor_mora_previa,52.8,2022Q3,1.3794215669673841e-36,Por diseño (solo si hay crédito previo)
+aval_pct,41.2,2024Q3,3.1663935205390573e-196,Por diseño (solo si hay aval)
+edad_t0,0.3,2022Q1,0.7848836698080743,Ocasional
+cuota_mensual,0.1,2022Q1,0.585412765478452,Ocasional

@@ -1,0 +1,17 @@
+objetivo,poblacion,creditos,eventos,clientes,tasa_%,ic95_%
+90+ en 12 meses (primario),todos los productos,791,46,369,5.82,4.4–7.7
+90+ en 12 meses (primario),libranza,731,21,356,2.87,1.9–4.4
+90+ en 12 meses (primario),libranza < 2025,494,16,271,3.24,2.0–5.2
+90+ en 12 meses (primario),libranza 2025+,237,5,185,2.11,0.9–4.8
+60+ en 12 meses,todos los productos,791,56,369,7.08,5.5–9.1
+60+ en 12 meses,libranza,731,27,356,3.69,2.6–5.3
+60+ en 12 meses,libranza < 2025,494,20,271,4.05,2.6–6.2
+60+ en 12 meses,libranza 2025+,237,7,185,2.95,1.4–6.0
+30+ en 6 meses,todos los productos,854,96,384,11.24,9.3–13.5
+30+ en 6 meses,libranza,788,62,371,7.87,6.2–10.0
+30+ en 6 meses,libranza < 2025,494,44,271,8.91,6.7–11.7
+30+ en 6 meses,libranza 2025+,294,18,216,6.12,3.9–9.5
+"90+ en 12 meses, variante B (cota)",todos los productos,791,152,369,19.22,16.6–22.1
+"90+ en 12 meses, variante B (cota)",libranza,731,124,356,16.96,14.4–19.9
+"90+ en 12 meses, variante B (cota)",libranza < 2025,494,118,271,23.89,20.3–27.8
+"90+ en 12 meses, variante B (cota)",libranza 2025+,237,6,185,2.53,1.2–5.4

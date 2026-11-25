@@ -1,0 +1,3 @@
+cid,producto,anio_cohorte,cierre,cierre_v2,max_dpd_12m,max_dpd_12m_B,dias_hasta_90,ratio_pagado_plan,n_pagos,madura_12m,motivo_exclusion,accion
+131,libranza,2022,CON_SALDO_PENDIENTE,INDETERMINADO,113,113,271.0,0.85,12,True,INDETERMINADO,"Verificar con la operación: ¿castigo, pago por fuera o error de registro?"
+250,libranza,2022,CON_SALDO_PENDIENTE,INDETERMINADO,218,218,212.0,1.16,28,True,INDETERMINADO,"Verificar con la operación: ¿castigo, pago por fuera o error de registro?"

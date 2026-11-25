@@ -1,0 +1,7 @@
+escenario,elegibles,eventos_90_12m,eventos_60_12m,indeterminados_maduros,tasa_90_%
+"Principal (tol 5 %, D4 −15/+45)",731,21,27,42,2.87
+Tolerancia 0 %,731,21,27,42,2.87
+Tolerancia 10 %,731,21,27,42,2.87
+D4 ventana −7/+30,721,21,27,52,2.91
+D4 ventana −30/+60,743,22,28,30,2.96
+Sin regla D4,711,20,26,62,2.81

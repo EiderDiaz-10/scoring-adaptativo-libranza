@@ -1,0 +1,6 @@
+{
+ "F3_01": {
+  "archivo": "figuras/fase3/F3_01_correlacion_nucleo.png",
+  "mensaje": "Las variables de historia están muy correlacionadas entre sí; la penalización reparte el efecto en lugar de elegir una al azar."
+ }
+}
