@@ -1,0 +1,38 @@
+{
+  "paso": "03_dataset_analitico",
+  "fecha_ejecucion": "2026-11-19T22:47:39",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "02_datos/fintech/2026-10-08/bd_credito.parquet": "5fb492a5bc88190a8c382692181d2564de918624cf3f203c1a083a443f09a486",
+    "02_datos/fintech/2026-10-08/bd_solicitud.parquet": "5a9c2c461d8ffbd2dd7246b8f2f00b45a725823c98c8adaed14c24e7cfc59dff",
+    "02_datos/fintech/2026-10-08/bd_desembolso.parquet": "cbb407c135230b81a1e3993e85808ce798d637579b5d0bb7a32a0199dc6a85a7",
+    "02_datos/fintech/2026-10-08/bd_tipocredito.parquet": "b76a791527159f021ed2a42481a7685ade3f5228bbfbb3632c4ad8f486035a38",
+    "02_datos/fintech/2026-10-08/bd_proyeccionpagos.parquet": "3f47afb514977a58a33ab617c83a77e954623ae6ed0a45101d0c6408cf4468df",
+    "02_datos/fintech/2026-10-08/bd_transaccionpago.parquet": "c43e5aee271b2ea7fe3ad50573cbdb66369bcaa7aa1f566b74d6410145a50feb",
+    "02_datos/fintech/2026-10-08/bd_saldo.parquet": "5fb0ec88591fe046fdbe95d719342a15e6936c5142b2f31f8a676701eb83b044",
+    "07_tesis_v2/_privado/objetivo_v2.parquet": "fb2d4511d1216581d47f67859cb122488a175e005b0972be9ee863d613a52efc",
+    "02_datos/fintech/2026-10-08/bd_cliente.parquet": "51baea195a7f96ce79695418676480e5eadc075ed9182036dfbe447542be0d21",
+    "03_resultados/fase2d_resultados/variables_buro_pila_v0.parquet": "c02d4119f38cb425279dedf6ad1b010e5bb3480d12364679f8c98897507e862a"
+  },
+  "filas": 1161,
+  "columnas": 63,
+  "predictores_diccionario": 39,
+  "libranza_elegibles": 731,
+  "eventos_90_12m": 21,
+  "excluidas_por_principio": [
+    "genero",
+    "identidad",
+    "LAFT/SARLAFT",
+    "geografía",
+    "huella digital"
+  ],
+  "salida_privada": {
+    "archivo": "_privado/dataset_analitico_v2.parquet",
+    "sha256": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298"
+  }
+}

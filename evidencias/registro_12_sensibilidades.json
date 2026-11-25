@@ -1,0 +1,42 @@
+{
+  "paso": "12_sensibilidades",
+  "fecha_ejecucion": "2026-11-19T18:43:14",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.2",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298",
+    "03_resultados/p3_home_credit/home_credit_mapeado_v1.parquet": "4cba631b26334a3ab7564ca95cc7f17fe603cf12f0530be0463647d2e1ccc7b9",
+    "02_datos/fintech/2026-10-08/bd_credito.parquet": "5fb492a5bc88190a8c382692181d2564de918624cf3f203c1a083a443f09a486",
+    "02_datos/fintech/2026-10-08/bd_solicitud.parquet": "5a9c2c461d8ffbd2dd7246b8f2f00b45a725823c98c8adaed14c24e7cfc59dff",
+    "02_datos/fintech/2026-10-08/bd_desembolso.parquet": "cbb407c135230b81a1e3993e85808ce798d637579b5d0bb7a32a0199dc6a85a7",
+    "02_datos/fintech/2026-10-08/bd_tipocredito.parquet": "b76a791527159f021ed2a42481a7685ade3f5228bbfbb3632c4ad8f486035a38",
+    "02_datos/fintech/2026-10-08/bd_proyeccionpagos.parquet": "3f47afb514977a58a33ab617c83a77e954623ae6ed0a45101d0c6408cf4468df",
+    "02_datos/fintech/2026-10-08/bd_transaccionpago.parquet": "c43e5aee271b2ea7fe3ad50573cbdb66369bcaa7aa1f566b74d6410145a50feb",
+    "02_datos/fintech/2026-10-08/bd_saldo.parquet": "5fb0ec88591fe046fdbe95d719342a15e6936c5142b2f31f8a676701eb83b044",
+    "07_tesis_v2/_privado/objetivo_v2.parquet": "fb2d4511d1216581d47f67859cb122488a175e005b0972be9ee863d613a52efc",
+    "07_tesis_v2/_privado/grupo_cliente_v2.parquet": "7d9331588da63a5f6bfc671e47b31f0f843ba81d3eb322bd7e8cd86510665b6f",
+    "02_datos/fintech/2026-10-08/bd_cliente.parquet": "51baea195a7f96ce79695418676480e5eadc075ed9182036dfbe447542be0d21"
+  },
+  "escenarios": [
+    "Principal (v1.1: 733/23)",
+    "Etiqueta original de la Fase 1 (731/21)",
+    "Evento 60+/12m",
+    "Evento 30+/6m",
+    "Evento 90+/12m, variante B",
+    "Indeterminados = no evento",
+    "Indeterminados = evento",
+    "Sin la cohorte 2022",
+    "Regla D4 con ventana −7/+30",
+    "Regla D4 con ventana −30/+60",
+    "Casos completos (sin imputar edad)",
+    "recaudo"
+  ],
+  "repeticiones": 10,
+  "bootstrap": 1000,
+  "rechazados": 202,
+  "C_L1": 0.46415888336127775
+}

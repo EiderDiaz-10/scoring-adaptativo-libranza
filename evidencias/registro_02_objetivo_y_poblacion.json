@@ -1,0 +1,53 @@
+{
+  "paso": "02_objetivo_y_poblacion",
+  "fecha_ejecucion": "2026-11-19T22:47:37",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "02_datos/fintech/2026-10-08/bd_credito.parquet": "5fb492a5bc88190a8c382692181d2564de918624cf3f203c1a083a443f09a486",
+    "02_datos/fintech/2026-10-08/bd_solicitud.parquet": "5a9c2c461d8ffbd2dd7246b8f2f00b45a725823c98c8adaed14c24e7cfc59dff",
+    "02_datos/fintech/2026-10-08/bd_desembolso.parquet": "cbb407c135230b81a1e3993e85808ce798d637579b5d0bb7a32a0199dc6a85a7",
+    "02_datos/fintech/2026-10-08/bd_tipocredito.parquet": "b76a791527159f021ed2a42481a7685ade3f5228bbfbb3632c4ad8f486035a38",
+    "02_datos/fintech/2026-10-08/bd_proyeccionpagos.parquet": "3f47afb514977a58a33ab617c83a77e954623ae6ed0a45101d0c6408cf4468df",
+    "02_datos/fintech/2026-10-08/bd_transaccionpago.parquet": "c43e5aee271b2ea7fe3ad50573cbdb66369bcaa7aa1f566b74d6410145a50feb",
+    "02_datos/fintech/2026-10-08/bd_saldo.parquet": "5fb0ec88591fe046fdbe95d719342a15e6936c5142b2f31f8a676701eb83b044",
+    "07_tesis_v2/_privado/grupo_cliente_v2.parquet": "7d9331588da63a5f6bfc671e47b31f0f843ba81d3eb322bd7e8cd86510665b6f",
+    "03_resultados/fase5_resultados/objetivo_v1.parquet": "eaedac72dd47302266fda3d1ace4cfd56c9cb0146f3b912e3f8f7ffb09518c5a",
+    "02_datos/fintech/2026-10-08/bd_pagosempresas.parquet": "ed630676fa182359db3d9161136ad60d183e88001398c725859eaa8dcba37ae8"
+  },
+  "fecha_corte": "2026-10-08",
+  "parametros_mora": {
+    "TOL_ABS": 5000.0,
+    "TOL_REL": 0.05,
+    "SALDO_CUOTAS": 0.5,
+    "PREPAGO_DIAS": 30,
+    "PREPAGO_CUOTAS": 1.5,
+    "PREPAGO_RATIO": 0.85,
+    "VENTANAS": [
+      6,
+      12
+    ],
+    "UMBRALES": [
+      30,
+      60,
+      90
+    ]
+  },
+  "ventana_refi": [
+    -15,
+    45
+  ],
+  "libranza_elegibles": 731,
+  "eventos_90_12m": 21,
+  "eventos_60_12m": 27,
+  "coincidencia_v1_y90": 100.0,
+  "kappa_pagosempresas": 0.466,
+  "salida_privada": {
+    "archivo": "_privado/objetivo_v2.parquet",
+    "sha256": "fb2d4511d1216581d47f67859cb122488a175e005b0972be9ee863d613a52efc"
+  }
+}

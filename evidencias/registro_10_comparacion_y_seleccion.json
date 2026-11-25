@@ -1,0 +1,19 @@
+{
+  "paso": "10_comparacion_y_seleccion",
+  "fecha_ejecucion": "2026-11-19T18:40:08",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.2",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298",
+    "03_resultados/p3_home_credit/home_credit_mapeado_v1.parquet": "4cba631b26334a3ab7564ca95cc7f17fe603cf12f0530be0463647d2e1ccc7b9"
+  },
+  "bootstrap": 2000,
+  "elegido": "M2",
+  "mejor_log_loss": "M3",
+  "mejora_frente_tasa_base_demostrable": false,
+  "harrell_replicas": 500
+}

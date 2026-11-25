@@ -1,0 +1,26 @@
+{
+  "paso": "16_potencia_y_monitoreo",
+  "fecha_ejecucion": "2026-11-19T23:49:45",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298",
+    "03_resultados/p3_home_credit/home_credit_mapeado_v1.parquet": "4cba631b26334a3ab7564ca95cc7f17fe603cf12f0530be0463647d2e1ccc7b9"
+  },
+  "salidas": [
+    "resultados/fase6/potencia_adelante.csv",
+    "resultados/fase6/protocolo_monitoreo.md",
+    "resultados/fase6/informe_fase6.md",
+    "resultados/fase6/despliegue_referencia.csv",
+    "resultados/fase6/p7_v2_adaptativo.xlsx",
+    "figuras/fase6/I03_potencia_adelante.png",
+    "figuras/fase6/I04_psi_disparadores.png",
+    "resultados/fase6/catalogo_figuras.md"
+  ],
+  "eventos_actuales": 23,
+  "eventos_por_anio": 5.75
+}

@@ -1,0 +1,21 @@
+{
+  "paso": "14_evaluacion_financiera",
+  "fecha_ejecucion": "2026-11-19T23:19:16",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298",
+    "03_resultados/p3_home_credit/home_credit_mapeado_v1.parquet": "4cba631b26334a3ab7564ca95cc7f17fe603cf12f0530be0463647d2e1ccc7b9",
+    "02_datos/fintech/2026-10-08/bd_transaccionpago.parquet": "c43e5aee271b2ea7fe3ad50573cbdb66369bcaa7aa1f566b74d6410145a50feb",
+    "02_datos/fintech/2026-10-08/bd_saldomesames.parquet": "695f1729c15c4826c99f524f1ec41e4899886d236d19040f021c86fd8fe6739b"
+  },
+  "predicciones": "_privado/oof_principal.npz (media de 20 repeticiones)",
+  "bootstrap": 2000,
+  "costo_fondeo_mensual": 0.01,
+  "lgd_observada_ponderada": 0.5942062197986062,
+  "rechazados_regla_M0b": 112
+}

@@ -1,0 +1,30 @@
+{
+  "paso": "15_simulacion_prequential",
+  "fecha_ejecucion": "2026-11-19T18:43:34",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.2",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298",
+    "03_resultados/p3_home_credit/home_credit_mapeado_v1.parquet": "4cba631b26334a3ab7564ca95cc7f17fe603cf12f0530be0463647d2e1ccc7b9"
+  },
+  "salidas": [
+    "resultados/fase6/metricas_estrategias.csv",
+    "resultados/fase6/comparaciones_pareadas.csv",
+    "resultados/fase6/bitacora_actualizaciones.csv",
+    "resultados/fase6/p7_v2_adaptativo.xlsx",
+    "figuras/fase6/I01_auc_por_origen.png",
+    "figuras/fase6/I02_delta_logloss_vs_estatico.png"
+  ],
+  "n_preds": 2165,
+  "estrategias": [
+    "bayes_secuencial",
+    "estatico",
+    "expansivo",
+    "ponderado",
+    "tasa_base"
+  ]
+}

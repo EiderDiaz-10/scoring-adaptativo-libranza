@@ -1,0 +1,37 @@
+{
+  "paso": "01_auditoria_tablas",
+  "fecha_ejecucion": "2026-11-19T22:47:32",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "02_datos/fintech/2026-10-08/bd_credito.parquet": "5fb492a5bc88190a8c382692181d2564de918624cf3f203c1a083a443f09a486",
+    "02_datos/fintech/2026-10-08/bd_solicitud.parquet": "5a9c2c461d8ffbd2dd7246b8f2f00b45a725823c98c8adaed14c24e7cfc59dff",
+    "02_datos/fintech/2026-10-08/bd_cliente.parquet": "51baea195a7f96ce79695418676480e5eadc075ed9182036dfbe447542be0d21",
+    "02_datos/fintech/2026-10-08/bd_empresas.parquet": "331ad06a74310d7ee8674c07f6db5a5427bab6555851fd3a65d9e82ac63ca7bc",
+    "02_datos/fintech/2026-10-08/bd_desembolso.parquet": "cbb407c135230b81a1e3993e85808ce798d637579b5d0bb7a32a0199dc6a85a7",
+    "02_datos/fintech/2026-10-08/bd_proyeccionpagos.parquet": "3f47afb514977a58a33ab617c83a77e954623ae6ed0a45101d0c6408cf4468df",
+    "02_datos/fintech/2026-10-08/bd_transaccionpago.parquet": "c43e5aee271b2ea7fe3ad50573cbdb66369bcaa7aa1f566b74d6410145a50feb",
+    "02_datos/fintech/2026-10-08/bd_saldo.parquet": "5fb0ec88591fe046fdbe95d719342a15e6936c5142b2f31f8a676701eb83b044",
+    "02_datos/fintech/2026-10-08/bd_saldomesames.parquet": "695f1729c15c4826c99f524f1ec41e4899886d236d19040f021c86fd8fe6739b",
+    "02_datos/fintech/2026-10-08/bd_pagosempresas.parquet": "ed630676fa182359db3d9161136ad60d183e88001398c725859eaa8dcba37ae8",
+    "02_datos/fintech/2026-10-08/bd_facturacioninteres.parquet": "0a050760c3c5c71e23812b6854b8fe859470b105bfbdebfc7758b0d1b1837020",
+    "02_datos/fintech/2026-10-08/bd_avales.parquet": "bf5205298036fddb360ec0a30d80c6a507d71a338b6c771595886c38395b6e2f",
+    "02_datos/fintech/2026-10-08/bd_consultas.parquet": "e4a05b7b6839c16c5bc4c2f0386ee9204aedc51883bc2d5e8a7f0cf0a7d3b8d9",
+    "02_datos/fintech/2026-10-08/bd_tipocredito.parquet": "b76a791527159f021ed2a42481a7685ade3f5228bbfbb3632c4ad8f486035a38",
+    "02_datos/fintech/2026-10-08/bd_gastosadministrativos.parquet": "ab78298e90489bef7e5f210366d74dc03c1e94c5830709854e2ddf379a597b74"
+  },
+  "tablas": 15,
+  "reglas_evaluadas": 52,
+  "reglas_con_hallazgos": 9,
+  "salidas": [
+    "resultados/fase1/inventario_tablas.csv",
+    "resultados/fase1/duplicados_por_tabla.csv",
+    "resultados/fase1/integridad_referencial.csv",
+    "resultados/fase1/rango_fechas.csv",
+    "resultados/fase1/reglas_calidad.csv"
+  ]
+}

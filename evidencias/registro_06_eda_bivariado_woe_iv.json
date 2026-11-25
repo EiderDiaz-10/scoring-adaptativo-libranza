@@ -1,0 +1,23 @@
+{
+  "paso": "06_eda_bivariado_woe_iv",
+  "fecha_ejecucion": "2026-11-19T22:48:35",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298"
+  },
+  "poblacion": "libranza elegible < 2025",
+  "creditos": 494,
+  "eventos": 16,
+  "bootstrap": 500,
+  "iv_ruido_p95": 0.4458702463150995,
+  "figuras": [
+    "E06",
+    "E07",
+    "E08"
+  ]
+}

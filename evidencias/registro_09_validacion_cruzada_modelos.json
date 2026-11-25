@@ -1,0 +1,32 @@
+{
+  "paso": "09_validacion_cruzada_modelos",
+  "fecha_ejecucion": "2026-11-19T22:50:00",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298",
+    "03_resultados/p3_home_credit/home_credit_mapeado_v1.parquet": "4cba631b26334a3ab7564ca95cc7f17fe603cf12f0530be0463647d2e1ccc7b9"
+  },
+  "modelos": [
+    "M0a",
+    "M0b",
+    "M1",
+    "M2",
+    "M2F",
+    "M3",
+    "M4",
+    "M5",
+    "M6",
+    "M7_60",
+    "M7_30"
+  ],
+  "repeticiones": 20,
+  "pliegues": 5,
+  "huella_particiones": "f64cf8b90b908fc1",
+  "salida_privada": "_privado/oof_principal.npz",
+  "segundos_totales": 66.2
+}

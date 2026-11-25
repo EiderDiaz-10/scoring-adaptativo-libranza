@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormationYSam",
+      "Effect": "Allow",
+      "Action": ["cloudformation:*"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "ServiciosDelScore",
+      "Effect": "Allow",
+      "Action": ["lambda:*", "apigateway:*", "dynamodb:*", "s3:*", "logs:*", "cloudwatch:*", "sns:*", "scheduler:*",
+                 "budgets:*", "events:*"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "RolesSoloDelScore",
+      "Effect": "Allow",
+      "Action": ["iam:CreateRole", "iam:DeleteRole", "iam:GetRole", "iam:PassRole", "iam:AttachRolePolicy",
+                 "iam:DetachRolePolicy", "iam:PutRolePolicy", "iam:DeleteRolePolicy", "iam:GetRolePolicy",
+                 "iam:TagRole", "iam:UntagRole", "iam:ListRolePolicies", "iam:ListAttachedRolePolicies"],
+      "Resource": "arn:aws:iam::*:role/score-fintech-*"
+    }
+  ]
+}

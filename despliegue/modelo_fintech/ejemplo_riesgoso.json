@@ -1,0 +1,10 @@
+{
+  "_nota": "Solicitud FICTICIA de mayor riesgo para pruebas (formato M2). No corresponde a ningún cliente real.",
+  "tipo_producto": "libranza",
+  "monto_desembolsado": 30000000,
+  "plazo_meses": 48,
+  "edad_t0": 24,
+  "n_creditos_previos": 0,
+  "n_activos_t0": 0,
+  "emp_creditos_previos": 0
+}

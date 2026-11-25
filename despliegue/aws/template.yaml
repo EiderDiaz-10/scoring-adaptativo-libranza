@@ -1,0 +1,209 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Score crediticio FINTECH (tesis EAFIT). API para calificar solicitudes con el modelo exportado, registro de
+  calificaciones y desenlaces (sin datos personales), monitoreo mensual de estabilidad y alertas de errores y costo.
+
+Parameters:
+  CorreoAlertas:
+    Type: String
+    Description: Correo que recibe las alertas de errores, estabilidad y presupuesto
+  PresupuestoUSD:
+    Type: Number
+    Default: 10
+    Description: Presupuesto mensual en dólares para la alerta de costo
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures: [arm64]
+    MemorySize: 256
+    Timeout: 10
+    CodeUri: build_src/
+    Environment:
+      Variables:
+        TABLA_CALIFICACIONES: !Ref TablaCalificaciones
+        TABLA_DESENLACES: !Ref TablaDesenlaces
+
+Resources:
+  # ---------------------------------------------------------------- capa de ingesta: API con clave de acceso
+  ApiScore:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: v1
+      Auth:
+        ApiKeyRequired: true
+        UsagePlan:
+          CreateUsagePlan: PER_API
+          Throttle: {BurstLimit: 20, RateLimit: 10}
+          Quota: {Limit: 20000, Period: MONTH}
+      MethodSettings:
+        - ResourcePath: "/*"
+          HttpMethod: "*"
+          ThrottlingBurstLimit: 20
+          ThrottlingRateLimit: 10
+
+  # ---------------------------------------------------------------- capa de modelación
+  PuntuarFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: puntuar.handler
+      Description: Califica una solicitud con el modelo exportado (scoring.py + modelo.json)
+      Policies:
+        - DynamoDBWritePolicy: {TableName: !Ref TablaCalificaciones}
+      Events:
+        Puntuar:
+          Type: Api
+          Properties: {RestApiId: !Ref ApiScore, Path: /puntuar, Method: post}
+        Salud:
+          Type: Api
+          Properties: {RestApiId: !Ref ApiScore, Path: /salud, Method: get}
+
+  DesenlaceFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: desenlace.handler
+      Description: Registra los días de mora reales (retroalimentación)
+      Policies:
+        - DynamoDBWritePolicy: {TableName: !Ref TablaDesenlaces}
+      Events:
+        Desenlace:
+          Type: Api
+          Properties: {RestApiId: !Ref ApiScore, Path: /desenlace, Method: post}
+
+  # ---------------------------------------------------------------- capa de seguimiento
+  MonitoreoFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: monitoreo.handler
+      Description: PSI mensual por bandas y desempeño con los desenlaces registrados
+      Timeout: 120
+      MemorySize: 512
+      Environment:
+        Variables:
+          BUCKET_REPORTES: !Ref BucketReportes
+      Policies:
+        - DynamoDBReadPolicy: {TableName: !Ref TablaCalificaciones}
+        - DynamoDBReadPolicy: {TableName: !Ref TablaDesenlaces}
+        - S3WritePolicy: {BucketName: !Ref BucketReportes}
+        - CloudWatchPutMetricPolicy: {}
+      Events:
+        Mensual:
+          Type: ScheduleV2
+          Properties:
+            ScheduleExpression: cron(0 6 1 * ? *)
+            ScheduleExpressionTimezone: America/Bogota
+
+  # ---------------------------------------------------------------- almacenamiento (sin datos personales)
+  TablaCalificaciones:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions: [{AttributeName: id_solicitud, AttributeType: S}]
+      KeySchema: [{AttributeName: id_solicitud, KeyType: HASH}]
+      SSESpecification: {SSEEnabled: true}
+      PointInTimeRecoverySpecification: {PointInTimeRecoveryEnabled: true}
+
+  TablaDesenlaces:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions: [{AttributeName: id_solicitud, AttributeType: S}]
+      KeySchema: [{AttributeName: id_solicitud, KeyType: HASH}]
+      SSESpecification: {SSEEnabled: true}
+      PointInTimeRecoverySpecification: {PointInTimeRecoveryEnabled: true}
+
+  BucketReportes:
+    Type: AWS::S3::Bucket
+    Properties:
+      VersioningConfiguration: {Status: Enabled}
+      BucketEncryption:
+        ServerSideEncryptionConfiguration: [{ServerSideEncryptionByDefault: {SSEAlgorithm: AES256}}]
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  # ---------------------------------------------------------------- registros (90 días)
+  LogsPuntuar:
+    Type: AWS::Logs::LogGroup
+    Properties: {LogGroupName: !Sub "/aws/lambda/${PuntuarFunction}", RetentionInDays: 90}
+  LogsDesenlace:
+    Type: AWS::Logs::LogGroup
+    Properties: {LogGroupName: !Sub "/aws/lambda/${DesenlaceFunction}", RetentionInDays: 90}
+  LogsMonitoreo:
+    Type: AWS::Logs::LogGroup
+    Properties: {LogGroupName: !Sub "/aws/lambda/${MonitoreoFunction}", RetentionInDays: 90}
+
+  # ---------------------------------------------------------------- alertas
+  TemaAlertas:
+    Type: AWS::SNS::Topic
+    Properties:
+      Subscription: [{Protocol: email, Endpoint: !Ref CorreoAlertas}]
+
+  AlarmaErrores:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Errores en la calificación
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions: [{Name: FunctionName, Value: !Ref PuntuarFunction}]
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+      AlarmActions: [!Ref TemaAlertas]
+
+  AlarmaLatencia:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Latencia p95 de la calificación mayor a 2 segundos
+      Namespace: AWS/Lambda
+      MetricName: Duration
+      Dimensions: [{Name: FunctionName, Value: !Ref PuntuarFunction}]
+      ExtendedStatistic: p95
+      Period: 300
+      EvaluationPeriods: 3
+      Threshold: 2000
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+      AlarmActions: [!Ref TemaAlertas]
+
+  AlarmaEstabilidad:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: El PSI mensual por bandas supera 0,25 (cambio mayor en la población calificada)
+      Namespace: FINTECH/Score
+      MetricName: PSI_bandas
+      Statistic: Maximum
+      Period: 86400
+      EvaluationPeriods: 1
+      Threshold: 0.25
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: notBreaching
+      AlarmActions: [!Ref TemaAlertas]
+
+  Presupuesto:
+    Type: AWS::Budgets::Budget
+    Properties:
+      Budget:
+        BudgetName: !Sub "score-fintech-${AWS::StackName}"
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit: {Amount: !Ref PresupuestoUSD, Unit: USD}
+      NotificationsWithSubscribers:
+        - Notification: {NotificationType: ACTUAL, ComparisonOperator: GREATER_THAN, Threshold: 80, ThresholdType: PERCENTAGE}
+          Subscribers: [{SubscriptionType: EMAIL, Address: !Ref CorreoAlertas}]
+
+Outputs:
+  UrlApi:
+    Description: URL base del API (agregar /puntuar, /salud o /desenlace)
+    Value: !Sub "https://${ApiScore}.execute-api.${AWS::Region}.amazonaws.com/v1"
+  IdClaveApi:
+    Description: "Id de la clave del API. Valor: aws apigateway get-api-key --api-key <id> --include-value"
+    Value: !Ref ApiScoreApiKey
+  BucketReportes:
+    Value: !Ref BucketReportes

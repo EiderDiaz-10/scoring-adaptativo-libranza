@@ -1,0 +1,23 @@
+{
+  "paso": "05_eda_descriptivo_y_faltantes",
+  "fecha_ejecucion": "2026-11-19T22:47:55",
+  "semilla": 20261115,
+  "versiones": {
+    "python": "3.14.10",
+    "pandas": "3.0.0",
+    "numpy": "2.4.2"
+  },
+  "insumos_sha256": {
+    "07_tesis_v2/_privado/dataset_analitico_v2.parquet": "5bf052e77f76a84fcf94db0552157d7e65bea7cc95a7e7152bd75207b8074298",
+    "02_datos/fintech/2026-10-08/bd_solicitud.parquet": "5a9c2c461d8ffbd2dd7246b8f2f00b45a725823c98c8adaed14c24e7cfc59dff",
+    "02_datos/fintech/2026-10-08/bd_credito.parquet": "5fb492a5bc88190a8c382692181d2564de918624cf3f203c1a083a443f09a486"
+  },
+  "creditos": 1083,
+  "figuras": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05"
+  ]
+}

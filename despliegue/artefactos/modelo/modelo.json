@@ -1,0 +1,156 @@
+{
+ "nombre": "score_libranza",
+ "formato": "logistica_nucleo_v2",
+ "version": "20261115",
+ "fecha_entrenamiento": "2026-11-15",
+ "modelo": "M2 Logistica L2",
+ "hiperparametros": {
+  "C": 0.1,
+  "penalizacion": "L2"
+ },
+ "origen_resultados": "07_tesis_v2 (protocolo v1.1, regla de selección preespecificada)",
+ "es_ensayo": false,
+ "producto": "libranza",
+ "entrenamiento": {
+  "creditos": 733,
+  "eventos": 23,
+  "tasa_base": 0.03137789904502047,
+  "evento": "90 o más días de mora en los 12 meses desde el desembolso"
+ },
+ "metricas_validacion": {
+  "esquema": "StratifiedGroupKFold 5 x 20 por cliente",
+  "auc": 0.62936,
+  "log_loss": 0.13869,
+  "pendiente_calibracion": 0.61808
+ },
+ "entradas": {
+  "numericas": [
+   "monto_desembolsado",
+   "plazo_meses",
+   "edad_t0",
+   "n_creditos_previos",
+   "meses_desde_primer_credito",
+   "peor_mora_previa",
+   "n_activos_t0",
+   "emp_creditos_previos"
+  ],
+  "categoricas": {
+   "cierre_previo": [
+    "sin_previo",
+    "a_termino",
+    "prepago",
+    "con_saldo",
+    "refinanciacion",
+    "otro_o_activo"
+   ]
+  }
+ },
+ "nucleo": [
+  {
+   "variable": "log_monto",
+   "mediana": 14.914123,
+   "media": 14.953436,
+   "de": 1.081142,
+   "coef_estandarizado": 0.238578
+  },
+  {
+   "variable": "log_plazo",
+   "mediana": 2.612521,
+   "media": 2.652233,
+   "de": 0.741015,
+   "coef_estandarizado": 0.047527
+  },
+  {
+   "variable": "edad_t0",
+   "mediana": 37.321013,
+   "media": 39.297928,
+   "de": 10.97161,
+   "coef_estandarizado": -0.198641
+  },
+  {
+   "variable": "tiene_historia",
+   "mediana": 1.0,
+   "media": 0.530696,
+   "de": 0.499057,
+   "coef_estandarizado": 0.031025
+  },
+  {
+   "variable": "log_n_previos",
+   "mediana": 0.693147,
+   "media": 0.540838,
+   "de": 0.574655,
+   "coef_estandarizado": -0.016339
+  },
+  {
+   "variable": "meses_cliente",
+   "mediana": 3.153745,
+   "media": 7.863567,
+   "de": 10.176513,
+   "coef_estandarizado": -0.167703
+  },
+  {
+   "variable": "log_peor_mora_previa",
+   "mediana": 0.0,
+   "media": 0.994441,
+   "de": 1.389596,
+   "coef_estandarizado": -0.031253
+  },
+  {
+   "variable": "previo_adverso",
+   "mediana": 0.0,
+   "media": 0.195089,
+   "de": 0.396269,
+   "coef_estandarizado": 0.045209
+  },
+  {
+   "variable": "previo_favorable",
+   "mediana": 0.0,
+   "media": 0.170532,
+   "de": 0.3761,
+   "coef_estandarizado": -0.070561
+  },
+  {
+   "variable": "n_activos_t0",
+   "mediana": 0.0,
+   "media": 0.379263,
+   "de": 0.517846,
+   "coef_estandarizado": -0.133887
+  },
+  {
+   "variable": "log_emp_previos",
+   "mediana": 4.430817,
+   "media": 4.06824,
+   "de": 1.539582,
+   "coef_estandarizado": -0.329049
+  }
+ ],
+ "intercepto": -3.619789,
+ "recalibracion": {
+  "a": 0.0,
+  "b": 1.0,
+  "nota": "Sin recalibración; la ficha recomienda ajustar el intercepto a la tasa reciente antes de decidir con la PD."
+ },
+ "bandas": {
+  "cortes": [
+   0.0157,
+   0.0314,
+   0.0628,
+   0.1255
+  ],
+  "etiquetas": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "regla": "relativas a la tasa base p = 3,14 %: 0,5p, p, 2p, 4p",
+  "distribucion_referencia": {
+   "A": 0.05457,
+   "B": 0.548431,
+   "C": 0.34652099999999997,
+   "D": 0.050477,
+   "E": 0.0
+  }
+ }
+}

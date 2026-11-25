@@ -1,0 +1,13 @@
+{
+  "_nota": "Solicitud FICTICIA para pruebas (formato del modelo M2, tesis v2). No corresponde a ningún cliente real.",
+  "tipo_producto": "libranza",
+  "monto_desembolsado": 9000000,
+  "plazo_meses": 36,
+  "edad_t0": 34,
+  "n_creditos_previos": 1,
+  "meses_desde_primer_credito": 18,
+  "peor_mora_previa": 3,
+  "cierre_previo": "a_termino",
+  "n_activos_t0": 0,
+  "emp_creditos_previos": 40
+}
