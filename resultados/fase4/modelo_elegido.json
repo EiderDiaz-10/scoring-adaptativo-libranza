@@ -1,0 +1,6 @@
+{
+ "modelo": "M2",
+ "nombre": "M2 Logística penalizada",
+ "mejor_log_loss": "M3",
+ "mejora_frente_tasa_base_demostrable": false
+}

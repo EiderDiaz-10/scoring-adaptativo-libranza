@@ -1,0 +1,5 @@
+paso,resultado,detalle
+"1. Pendiente de calibración en [0,6; 1,4]","M2, M3, M6, M5",M1: 0.08; M2F: 0.22
+2. Menor log loss entre los elegibles,M3,log loss 0.1366
+3. Preferir el más simple si el IC pareado incluye 0,M2,M3 − M2: -0.0021 [-0.0049; +0.0006] → incluye 0
+4. Frente a la tasa base (M0a),mejora NO demostrable,Δ log loss -0.0009 [-0.0084; +0.0074]

@@ -1,0 +1,5 @@
+estrategia,rechazados,malos_evitados,malos_ic,buenos_rechazados,cambio_margen_MM,cambio_margen_ic
+Regla M0b,112,3.0,0–7,109.0,12.736,-40.9 a +98.3
+M2 (mismo número),112,7.0,3–14,105.0,-18.976,-73.1 a +76.5
+M3 (mismo número),112,8.0,3–14,104.0,-15.005,-74.3 a +82.1
+Azar (esperado),112,3.514,,108.486,-28.272,

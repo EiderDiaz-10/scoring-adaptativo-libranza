@@ -1,0 +1,6 @@
+escenario,lgd,perdida_realizada_MM,EL_M0a_MM,EL_M2_MM,EL_M3_MM,EL_M2_%_monto
+LGD 25 %,0.25,55.092,33.688,40.236,42.077,0.96
+LGD 45 %,0.45,99.165,60.639,72.424,75.738,1.728
+LGD 65 %,0.65,143.238,87.59,104.613,109.4,2.496
+LGD observada,0.594,130.943,80.071,95.633,100.009,2.282
+Pérdida observada (exposición al incumplimiento − recuperación),,115.23,,,,

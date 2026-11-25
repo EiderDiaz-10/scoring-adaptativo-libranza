@@ -1,0 +1,5 @@
+modelo,auc_aprobados,auc_ic,log_loss_aprobados,pd_media_aprobados,pd_media_rechazados,pd_through_the_door,coef_log_monto,coef_log_plazo,coef_edad_t0,coef_tiene_historia,coef_log_n_previos,coef_meses_cliente,coef_log_peor_mora_previa,coef_previo_adverso,coef_previo_favorable,coef_n_activos_t0,coef_log_emp_previos
+M2,0.6277,0.505–0.749,0.1391,0.0314,0.0329,0.0318,0.2386,0.0475,-0.1986,0.031,-0.0163,-0.1677,-0.0313,0.0452,-0.0706,-0.1339,-0.329
+k=1,0.6255,0.502–0.747,0.1392,0.0314,0.0329,0.0317,0.2427,0.0477,-0.2008,0.0251,-0.0237,-0.1658,-0.0358,0.0442,-0.0692,-0.1339,-0.3423
+k=2,0.6273,0.504–0.747,0.14,0.0383,0.0411,0.0389,0.229,0.0517,-0.2079,0.0324,-0.0173,-0.146,-0.0438,0.0173,-0.0836,-0.0948,-0.3836
+k=3,0.6278,0.505–0.748,0.142,0.045,0.0493,0.0459,0.2171,0.0578,-0.2113,0.0364,-0.0107,-0.1279,-0.0517,-0.0076,-0.0978,-0.0641,-0.4157

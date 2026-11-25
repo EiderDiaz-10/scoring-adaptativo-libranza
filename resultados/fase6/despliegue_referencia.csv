@@ -1,0 +1,6 @@
+elemento,estado,accion_fase6
+API scoring,Operativa con M2 (v20261115),Reemplazó a v20261107
+Artefacto del modelo,"M2, logística L2 (11 predictores)",Publicado con la tesis v2
+Endpoint de mora / feedback,Diseñado en LEEME_despliegue,Alinearlo al protocolo de lotes
+Contrato PD + banda,Vigente,Conservar si un día se exporta M2/M3
+Tol. reproducibilidad,1e-9,Mantener

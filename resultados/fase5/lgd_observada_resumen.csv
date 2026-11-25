@@ -1,0 +1,5 @@
+estadistico,valor,ic_inf,ic_sup
+media,0.4602,0.2769,0.6349
+mediana,0.444,0.0,0.9081
+ponderada_exposicion,0.5942,0.4601,0.7501
+media_sin_descontar,0.4353,0.2549,0.6093

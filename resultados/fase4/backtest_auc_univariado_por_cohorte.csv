@@ -1,0 +1,12 @@
+variable,2022,2023,2024,2025+,cambia_de_lado
+log_monto,0.618,0.774,0.642,0.374,True
+log_plazo,0.229,0.649,0.638,0.365,True
+edad_t0,0.198,0.535,0.423,0.432,False
+tiene_historia,0.465,0.599,0.481,0.372,True
+log_n_previos,0.465,0.622,0.421,0.383,True
+meses_cliente,0.465,0.687,0.35,0.334,True
+log_peor_mora_previa,0.488,0.583,0.352,0.455,False
+previo_adverso,0.5,0.651,0.521,0.369,True
+previo_favorable,0.5,0.556,0.403,0.473,False
+n_activos_t0,0.465,0.367,0.5,0.47,False
+log_emp_previos,0.266,0.501,0.281,0.493,False

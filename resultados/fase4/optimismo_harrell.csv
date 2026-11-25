@@ -1,0 +1,5 @@
+metrica,aparente,optimismo_medio,corregida,validacion_cruzada_5x20
+log_loss,0.1298,-0.0059,0.1358,0.1387
+auc,0.726,0.0514,0.6746,0.6294
+pendiente_cal,1.3121,,1.4452,0.6181
+brier_escalado,0.028,0.0163,0.0117,0.0046

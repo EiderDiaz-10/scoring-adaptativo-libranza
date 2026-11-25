@@ -1,0 +1,3 @@
+conjunto,creditos,eventos,clientes,tasa_%,ic95_%
+Entrenamiento (< 2025),496,18,272,3.63,2.3–5.7
+Prueba temporal (2025+),237,5,185,2.11,0.9–4.8

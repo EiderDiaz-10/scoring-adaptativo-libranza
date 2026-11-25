@@ -1,0 +1,18 @@
+{
+ "I01": {
+  "archivo": "figuras/fase6/I01_auc_por_origen.png",
+  "mensaje": "Ninguna estrategia sostiene un AUC estable por origen; con pocos eventos por trimestre el trazo es ruidoso."
+ },
+ "I02": {
+  "archivo": "figuras/fase6/I02_delta_logloss_vs_estatico.png",
+  "mensaje": "Reentrenar mejora el log loss frente al M2 congelado, pero ninguna estrategia supera a la tasa base conocida."
+ },
+ "I03": {
+  "archivo": "figuras/fase6/I03_potencia_adelante.png",
+  "mensaje": "Para detectar una mejora de 0,05 de AUC hacen falta cientos de eventos; con la tasa actual son varios años."
+ },
+ "I04": {
+  "archivo": "figuras/fase6/I04_psi_disparadores.png",
+  "mensaje": "El PSI de predictores supera 0,25 en varios orígenes; el umbral de deriva sí se habría activado."
+ }
+}

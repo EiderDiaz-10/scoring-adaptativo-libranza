@@ -1,0 +1,12 @@
+variable,esperado,M2,M3,M5,Cox,coinciden_con_esperado
+log_monto,?,+,+,+,+,
+log_plazo,+,+,+,+,−,3.0
+edad_t0,−,−,−,−,−,4.0
+tiene_historia,−,+,+,0,+,0.0
+log_n_previos,−,−,−,0,+,2.0
+meses_cliente,−,−,−,−,−,4.0
+log_peor_mora_previa,+,−,+,0,+,2.0
+previo_adverso,+,+,+,0,−,2.0
+previo_favorable,−,−,−,0,−,3.0
+n_activos_t0,+,−,−,0,−,0.0
+log_emp_previos,−,−,−,−,−,4.0

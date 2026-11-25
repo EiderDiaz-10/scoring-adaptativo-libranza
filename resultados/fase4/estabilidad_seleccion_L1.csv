@@ -1,0 +1,12 @@
+variable,C=0.464,C=0.1
+log_monto,0.854,0.316
+log_plazo,0.57,0.042
+edad_t0,0.844,0.202
+tiene_historia,0.382,0.056
+log_n_previos,0.228,0.026
+meses_cliente,0.544,0.072
+log_peor_mora_previa,0.482,0.038
+previo_adverso,0.524,0.014
+previo_favorable,0.4,0.006
+n_activos_t0,0.54,0.07
+log_emp_previos,0.928,0.79

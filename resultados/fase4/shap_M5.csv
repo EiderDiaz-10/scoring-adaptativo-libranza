@@ -1,0 +1,12 @@
+variable,media_abs_shap,rho_valor_shap
+log_emp_previos,0.2163,-0.7618
+meses_cliente,0.153,-0.9059
+log_plazo,0.1132,0.489
+edad_t0,0.1086,-0.8457
+log_monto,0.0472,0.8188
+tiene_historia,0.0,
+log_n_previos,0.0,
+log_peor_mora_previa,0.0,
+previo_adverso,0.0,
+previo_favorable,0.0,
+n_activos_t0,0.0,
